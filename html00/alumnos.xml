@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <alumno>
+        <nombre>Ere Jaeger</nombre>
+        <nacimiento>0835-03-25</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Carlos Amador</nombre>
+        <nacimiento>0835-03-25</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Alejandro López</nombre>
+        <nacimiento>0835-03-25</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Mikasa Ackerman</nombre>
+        <nacimiento>0835-02-10</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Armin Arlert</nombre>
+        <nacimiento>0835-10-10</nacimiento>
+    </alumno>
+</alumnos>
