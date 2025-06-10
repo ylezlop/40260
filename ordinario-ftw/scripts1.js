@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Datos de las canciones
     const songsData = [
-        { id: 1, title: "Implicit Demand for Proof", audio: "audio/implicit_demand_for_proof.mp3" }, // Ruta de marcador de posición
+        { id: 1, title: "Implicit Demand for Proof", audio: "audio/implicit_demand_for_proof.mp3" },
         { id: 2, title: "Fall Away", audio: "audio/fall_away.mp3" },
         { id: 3, title: "The Pantaloon", audio: "audio/the_pantaloon.mp3" },
         { id: 4, title: "Addict with a Pen", audio: "audio/addict_with_a_pen.mp3" },
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const songsTableBody = document.querySelector('#songs-table tbody');
 
-    // Poblar la tabla de canciones
     songsData.forEach(song => {
         const row = document.createElement('tr');
 
@@ -34,56 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const audioPlayer = document.createElement('audio');
         audioPlayer.controls = true;
         audioPlayer.src = song.audio;
-        audioPlayer.type = "audio/mpeg"; // Asumiendo MP3, cambiar si es necesario
+        audioPlayer.type = "audio/mpeg";
         audioCell.appendChild(audioPlayer);
         row.appendChild(audioCell);
 
         songsTableBody.appendChild(row);
     });
 
-    // Lógica del formulario de comentarios
-    const showCommentFormBtn = document.getElementById('show-comment-form-btn');
-    const commentFormSection = document.getElementById('comment-form-section');
-    const closeFormBtn = document.getElementById('close-form-btn');
-    const commentForm = document.getElementById('comment-form');
-    const ratingInput = document.getElementById('rating');
-    const ratingValueSpan = document.getElementById('rating-value');
-
-    // Actualizar la visualización de la calificación
-    ratingInput.addEventListener('input', () => {
-        ratingValueSpan.textContent = ratingInput.value;
-    });
-
-    // Mostrar formulario de comentarios
-    showCommentFormBtn.addEventListener('click', () => {
-        commentFormSection.classList.remove('hidden');
-    });
-
-    // Ocultar formulario de comentarios
-    closeFormBtn.addEventListener('click', () => {
-        commentFormSection.classList.add('hidden');
-    });
-
-    // Manejar el envío del formulario
-    commentForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Evitar el envío predeterminado del formulario
-
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            rating: ratingInput.value,
-            comment: document.getElementById('comment').value,
-            newsletter: document.getElementById('newsletter').checked,
-            listenAgain: document.querySelector('input[name="listen-again"]:checked').value
-        };
-
-        console.log('Comentario enviado:', formData);
-        alert('¡Gracias por tu comentario!');
-
-        /* Aquí es donde se enviarían los datos a un servidor */
-
-        commentForm.reset(); // Limpiar el formulario
-        ratingValueSpan.textContent = '3'; // Restablecer la visualización de la calificación
-        commentFormSection.classList.add('hidden'); // Ocultar el formulario después del envío
-    });
+    const triviaBtn = document.getElementById('trivia-btn');
+    if (triviaBtn) {
+        triviaBtn.addEventListener('click', () => {
+            window.location.href = 'pagina3.html';
+        });
+    }
 });

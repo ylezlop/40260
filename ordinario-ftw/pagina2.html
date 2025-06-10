@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios - TWENTY ØNE PILØTS</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="band-header-small" role="banner" aria-label="Encabezado del sitio">
+        <div class="header-content">
+            <h1>Comentarios del Álbum</h1>
+            <h2>Regional At Best</h2>
+        </div>
+    </header>
+
+    <main role="main" aria-label="Formulario de comentarios">
+        <aside id="comment-form-section" role="dialog" aria-modal="true" aria-labelledby="comment-form-heading">
+            <h3 id="comment-form-heading">Déjanos tus Comentarios sobre el Álbum</h3>
+            <form id="comment-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group rating-group">
+                    <label for="rating">Calificación del Álbum:</label>
+                    <input type="range" id="rating" name="rating" min="1" max="5" value="3" aria-valuemin="1" aria-valuemax="5" aria-valuenow="3">
+                    <i id="rating-star" class="fas fa-star"></i>
+                    <span id="rating-value" aria-live="polite">3</span> estrellas
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comentario:</label>
+                    <textarea id="comment" name="comment" rows="5" required aria-required="true"></textarea>
+                </div>
+                <div class="form-group radio-group">
+                    <p id="listen-again-label">¿Volverías a escuchar este álbum?</p>
+                    <input type="radio" id="listen-yes" name="listen-again" value="yes" checked aria-labelledby="listen-again-label listen-yes-label">
+                    <label for="listen-yes" id="listen-yes-label">Sí</label>
+                    <input type="radio" id="listen-no" name="listen-again" value="no" aria-labelledby="listen-again-label listen-no-label">
+                    <label for="listen-no" id="listen-no-label">No</label>
+                </div>
+                <button type="submit" aria-label="Enviar comentario sobre el álbum">Enviar Comentario</button>
+                <button type="button" id="back-to-home-btn" aria-label="Volver a la página principal">Volver al Álbum</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer role="contentinfo" aria-label="Pie de página con información de la banda y enlaces a redes sociales">
+        <p>¡Apoya a la banda en redes!</p>
+        <nav class="social-links" aria-label="Enlaces a las redes sociales oficiales de Twenty One Pilots">
+            <a href="https://www.facebook.com/twentyonepilots" target="_blank" aria-label="Visitar página de Facebook de Twenty One Pilots">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/twentyonepilots" target="_blank" aria-label="Visitar perfil de Twitter de Twenty One Pilots">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/twentyonepilots" target="_blank" aria-label="Visitar perfil de Instagram de Twenty One Pilots">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+        </nav>
+        <p>Twenty One Pilots - Regional At Best</p>
+    </footer>
+
+    <script src="scripts2.js"></script>
+</body>
+</html>
