@@ -7,3 +7,6 @@
 [submodule "ecommerce"]
 	path = ecommerce
 	url = https://github.com/ylezlop/ecommerce.git
+[submodule "xml00"]
+    path = xml00
+    url = https://github.com/ylezlop/xml00.git
